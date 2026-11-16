@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Destinations & Circuits | Thirumala Travel Agency</title>
+  <meta name="description"
+    content="Discover curated tour destinations with Thirumala Travel Agency: Ooty & Nilgiris, Odisha Spiritual Circuit, Andaman Islands, and North India Pilgrimage.">
+  <link rel="canonical" href="https://www.thirumalatravelagency.com/destinations.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tour Destinations | Thirumala Travel Agency">
+  <meta property="og:description"
+    content="Explore Ooty, Odisha, Andaman Islands, and North India Pilgrimage with Thirumala Travel Agency.">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-link">No.34, Shanthi nagar 2nd Street, Adambakkam, Chennai – 600 088</span>
+        <a href="tel:+917418051084" class="top-bar-link" data-config="phone-link"><span data-config="phone-text">+91 7418 051 084</span></a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://wa.me/917418051084" class="top-bar-link" data-config="whatsapp-link">WhatsApp Island Desk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Thirumala Travel Agency Home">
+        <span class="brand-title">Thirumala</span>
+        <span class="brand-subtitle">Travel Agency • Andaman</span>
+      </a>
+      <nav class="nav-menu">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item">
+          <a href="destinations.html" class="nav-link active">Destinations ▾</a>
+          <div class="nav-dropdown">
+            <a href="destination-detail.html?id=ooty-nilgiris" class="dropdown-link">Ooty & Nilgiris</a>
+            <a href="destination-detail.html?id=odisha" class="dropdown-link">Odisha Spiritual Circuit</a>
+            <a href="destination-detail.html?id=andaman" class="dropdown-link">Andaman Islands</a>
+            <a href="destination-detail.html?id=north-india" class="dropdown-link">North India Pilgrimage</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="packages.html" class="nav-link">Tour Packages ▾</a>
+          <div class="nav-dropdown">
+            <a href="package-detail.html?id=ooty-tour-package-1n2d" class="dropdown-link">Ooty Tour Package — 1N / 2D</a>
+            <a href="package-detail.html?id=ooty-tour-package-2n3d" class="dropdown-link">Ooty Tour Package — 2N / 3D</a>
+            <a href="package-detail.html?id=odisha-spiritual-tour-2d1n" class="dropdown-link">Odisha Spiritual Tour — 2D / 1N</a>
+            <a href="package-detail.html?id=andaman-tour-package-4n5d" class="dropdown-link">Andaman Tour Package — 4N / 5D</a>
+            <a href="package-detail.html?id=north-india-pilgrimage-tour-4d3n" class="dropdown-link">North India Pilgrimage Tour — 4D / 3N</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <div class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="btn btn-accent btn-sm" data-modal-open="enquiry"
+          data-package-name="Tour Inquiry">Plan My Trip</button>
+        <button type="button" class="mobile-nav-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section
+    style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #FFFFFF; padding: 50px 0 60px 0;">
+    <div class="container">
+      <nav style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 16px;">
+        <a href="index.html" style="color: #38BDF8;">Home</a> / <span>Destinations</span>
+      </nav>
+      <h1 style="color: #FFFFFF; font-size: clamp(2rem, 3.8vw, 2.9rem); margin-bottom: 12px;">Our Tour Destinations</h1>
+      <p style="color: #E2E8F0; max-width: 760px; font-size: 1.05rem;">Explore the 4 signature destination regions covered by Thirumala Travel Agency across Ooty & Nilgiris, Odisha spiritual shrines, the Andaman archipelago, and North India pilgrimage circuits.</p>
+    </div>
+  </section>
+
+  <!-- Destinations Grid Section -->
+  <section style="padding: 70px 0 90px 0;">
+    <div class="container">
+      <div class="destinations-grid stagger-grid" id="destinationsList">
+        <!-- Rendered dynamically from window.TRAVEL_DATA.destinations -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <span class="brand-title" style="color: #FFFFFF;">Thirumala</span>
+            <span class="brand-subtitle" style="color: #38BDF8;">Travel Agency</span>
+          </div>
+          <p class="footer-desc">Your trusted partner for personalized tour packages, hotel bookings, tourist vehicles, and seamless travel logistics.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="packages.html">Tour Packages</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <div class="footer-links">
+            <a href="destination-detail.html?id=ooty-nilgiris">Ooty & Nilgiris</a>
+            <a href="destination-detail.html?id=odisha">Odisha Spiritual Circuit</a>
+            <a href="destination-detail.html?id=andaman">Andaman Islands</a>
+            <a href="destination-detail.html?id=north-india">North India Pilgrimage</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Island Desk</h4>
+          <div class="footer-contact-item"><span data-config="address-text">No.34, Shanthi nagar 2nd Street, Adambakkam, Chennai – 600 088, Tamilnadu</span></div>
+          <div class="footer-contact-item"><span><a href="tel:+917418051084" data-config="phone-link"><span
+                  data-config="phone-text">+91 7418 051 084</span></a></span></div>
+          <div class="footer-contact-item"><span><a href="https://wa.me/917418051084" data-config="whatsapp-link">+91 7418 051 084</a></span></div>
+          <div class="footer-contact-item"><span><a href="mailto:nathisoft1987@gmail.com" data-config="email-link"><span data-config="email-text">nathisoft1987@gmail.com</span></a></span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Thirumala Travel Agency. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/motion.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("destinationsList");
+      if (!container || !window.TRAVEL_DATA) return;
+
+      container.innerHTML = window.TRAVEL_DATA.destinations.map(dest => {
+        const pkgText = dest.packageCount === 1 ? "1 Tour Package" : `${dest.packageCount} Tour Packages`;
+        return `
+          <article class="destination-card">
+            <div class="destination-image-box">
+              <img src="${dest.image}" alt="${dest.name}">
+              <span class="destination-badge">${pkgText}</span>
+            </div>
+            <div class="destination-card-body">
+              <span style="font-size: 0.8rem; color: var(--secondary-dark); font-weight: 700; text-transform: uppercase;">${dest.tagline}</span>
+              <h3 style="margin: 6px 0 8px 0;">${dest.name}</h3>
+              <p>${dest.shortDesc}</p>
+              <div class="destination-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">${dest.idealDuration}</span>
+                <a href="destination-detail.html?id=${dest.id}" class="destination-link-btn">Explore Region <span class="arrow">→</span></a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      if (window.initLuxuryMotion) {
+        window.initLuxuryMotion();
+      }
+    });
+  </script>
+</body>
+</html>

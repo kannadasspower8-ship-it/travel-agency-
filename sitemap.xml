@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Main Pages -->
+  <url>
+    <loc>https://www.thirumalatravelagency.com/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/packages.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/destinations.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thirumalatravelagency.com/services.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/about.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/reviews.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/contact.html</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5 Approved Tour Packages -->
+  <url>
+    <loc>https://www.thirumalatravelagency.com/package-detail.html?id=ooty-tour-package-1n2d</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/package-detail.html?id=ooty-tour-package-2n3d</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/package-detail.html?id=odisha-spiritual-tour-2d1n</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/package-detail.html?id=andaman-tour-package-4n5d</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/package-detail.html?id=north-india-pilgrimage-tour-4d3n</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 4 Approved Destination Regions -->
+  <url>
+    <loc>https://www.thirumalatravelagency.com/destination-detail.html?id=ooty-nilgiris</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/destination-detail.html?id=odisha</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/destination-detail.html?id=andaman</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/destination-detail.html?id=north-india</loc>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.thirumalatravelagency.com/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/terms.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.thirumalatravelagency.com/cancellation.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
