@@ -1,0 +1,376 @@
+/**
+ * Thirumala Travel Agency - Responsive CSS
+ * Optimization for all viewports from 320px to 1920px
+ * Precision mobile-first tuning, large touch targets, and zero overflow.
+ */
+
+/* ==========================================================================
+   MOBILE PHONES (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Container Padding */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Universal Touch Targets */
+  .btn {
+    min-height: 46px;
+    padding: 11px 18px;
+    font-size: 0.92rem;
+  }
+
+  .btn-lg {
+    min-height: 50px;
+    padding: 13px 22px;
+    font-size: 0.98rem;
+  }
+
+  /* Section Headings */
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .section-badge {
+    font-size: 0.76rem;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+    margin-bottom: 10px;
+  }
+
+  .section-header p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    min-height: auto;
+    padding: 34px 0 46px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+    margin: 0 auto 16px auto;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 6.8vw, 2.35rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .hero-trust-bar {
+    gap: 14px;
+    padding-top: 18px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .trust-item {
+    justify-content: center;
+  }
+
+  /* All Grids on Mobile */
+  .destinations-grid,
+  .packages-grid,
+  .experiences-grid,
+  .editorial-reviews-grid,
+  .blogs-grid,
+  .process-sequence,
+  .editorial-why-us {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Travel Styles Grid (Clean 2-Column on Mobile) */
+  .styles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .style-card {
+    height: 180px;
+    padding: 16px 14px;
+  }
+
+  /* Destination & Package Cards */
+  .destination-image-box,
+  .package-thumb-wrap,
+  .experience-img-wrap,
+  .blog-thumb {
+    height: 190px;
+  }
+
+  .package-body,
+  .destination-card-body,
+  .experience-body,
+  .blog-body {
+    padding: 18px 16px;
+  }
+
+  .package-title {
+    font-size: 1.15rem;
+  }
+
+  .package-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .package-highlights-list {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .highlight-item {
+    font-size: 0.82rem;
+  }
+
+  .package-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .package-price-box {
+    text-align: left;
+  }
+
+  .price-amount {
+    font-size: 1.35rem;
+  }
+
+  .package-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .package-actions .btn {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px;
+    font-size: 0.84rem;
+    justify-content: center;
+  }
+
+  /* Itinerary Timeline on Mobile */
+  .itinerary-timeline {
+    padding-left: 24px;
+    margin: 20px 0;
+  }
+
+  .itinerary-timeline::before {
+    left: 7px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 16px;
+    height: 16px;
+    top: 5px;
+  }
+
+  .timeline-card {
+    padding: 16px 14px;
+  }
+
+  .timeline-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-card p {
+    font-size: 0.88rem;
+  }
+
+  /* Quick Enquiry Modal on Mobile */
+  .modal-box {
+    width: 95%;
+    max-height: 90vh;
+    border-radius: 16px;
+    margin: 10px;
+  }
+
+  .modal-header {
+    padding: 16px 18px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .modal-body {
+    padding: 18px 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.92rem;
+    min-height: 44px;
+  }
+
+  /* Final CTA Section */
+  .final-cta-section {
+    padding: 50px 0;
+  }
+
+  .final-cta-inner h2 {
+    font-size: clamp(1.6rem, 5.5vw, 2rem);
+  }
+
+  .final-cta-inner p {
+    font-size: 0.98rem;
+    margin-bottom: 24px;
+  }
+
+  .final-cta-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .final-cta-btns .btn {
+    width: 100%;
+  }
+
+  /* Site Footer on Mobile */
+  .site-footer {
+    padding-top: 44px;
+  }
+
+  .footer-top-grid {
+    gap: 28px;
+    margin-bottom: 36px;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+  }
+
+  .footer-bottom {
+    padding: 18px 0;
+  }
+
+  .footer-bottom-inner {
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   TABLET OPTIMIZATIONS (768px - 991px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .destinations-grid,
+  .packages-grid,
+  .experiences-grid,
+  .why-us-grid,
+  .steps-grid,
+  .reviews-grid,
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .styles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   LARGE DESKTOP (1440px+)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  :root {
+    --max-width: 1320px;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+@media print {
+  .site-header,
+  .top-bar,
+  .site-footer,
+  .floating-whatsapp,
+  .mobile-sticky-bar,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #000000;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY: RESPECT REDUCED MOTION SAFELY WITHOUT BREAKING TRANSITIONS
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .hero-bg-layer {
+    animation: none !important;
+  }
+  .luxury-loader {
+    display: none !important;
+  }
+}
+

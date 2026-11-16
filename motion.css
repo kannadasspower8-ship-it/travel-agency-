@@ -1,0 +1,420 @@
+/**
+ * Thirumala Travel Agency - Unified Luxury Motion System
+ * Rebuilt strictly for supreme smoothness, zero flash, zero layout shift, and compositor-friendly execution.
+ */
+
+:root {
+  --motion-fast: 180ms;
+  --motion-normal: 420ms;
+  --motion-slow: 680ms;
+
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   1. SCROLL PROGRESS BAR (Ultra-thin, smooth hardware accelerated)
+   ========================================================================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0EA5E9 0%, #38BDF8 50%, #F59E0B 100%);
+  z-index: 99999;
+  pointer-events: none;
+  transition: width 120ms ease-out;
+  box-shadow: 0 1px 6px rgba(14, 165, 233, 0.4);
+}
+
+/* ==========================================================================
+   2. FAST ELEGANT ENTRY CURTAIN (Max 1.0s – Never blocks or feels like a loader)
+   ========================================================================== */
+.luxury-loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #0B243E 0%, #051424 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 99998;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 450ms var(--ease-luxury), visibility 450ms var(--ease-luxury);
+  pointer-events: all;
+}
+
+.luxury-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-brand-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.loader-logo {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  animation: loaderWordmarkIn 500ms var(--ease-luxury) 50ms forwards;
+}
+
+.loader-logo span {
+  color: #38BDF8;
+}
+
+.loader-line {
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, #F59E0B 50%, transparent 100%);
+  margin: 14px 0 12px 0;
+  opacity: 0;
+  animation: loaderLineExpand 550ms var(--ease-luxury) 200ms forwards;
+}
+
+.loader-subtitle {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  animation: loaderSubtitleIn 500ms var(--ease-luxury) 350ms forwards;
+}
+
+@keyframes loaderWordmarkIn {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes loaderLineExpand {
+  from { width: 0; opacity: 0; }
+  to { width: 140px; opacity: 1; }
+}
+
+@keyframes loaderSubtitleIn {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to { opacity: 0.95; transform: translate3d(0, 0, 0); }
+}
+
+/* ==========================================================================
+   3. HERO SECTION (Smooth, Cinematic, Immediate Interaction)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gentle CSS-only background scale (1.00 -> 1.03) over 16 seconds — Zero scroll lag */
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  animation: heroCinematicZoom 16s var(--ease-smooth) forwards;
+  z-index: 0;
+}
+
+.hero-overlay-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(5, 20, 36, 0.90) 0%, rgba(10, 37, 64, 0.72) 100%);
+  z-index: 1;
+}
+
+@keyframes heroCinematicZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+/* Synchronized Hero Content Transitions (Strictly per Section 10) */
+.hero-section .hero-kicker {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 500ms var(--ease-luxury), transform 500ms var(--ease-luxury);
+}
+
+.hero-section .hero-title {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity 600ms var(--ease-luxury) 80ms, transform 600ms var(--ease-luxury) 80ms;
+}
+
+.hero-section .hero-subtitle {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 550ms var(--ease-luxury) 160ms, transform 550ms var(--ease-luxury) 160ms;
+}
+
+.hero-section .hero-ctas {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 500ms var(--ease-luxury) 240ms, transform 500ms var(--ease-luxury) 240ms;
+}
+
+.hero-section .hero-trust-bar {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 500ms var(--ease-luxury) 320ms, transform 500ms var(--ease-luxury) 320ms;
+}
+
+/* Active entered state */
+.hero-section.hero-entered .hero-kicker,
+.hero-section.hero-entered .hero-title,
+.hero-section.hero-entered .hero-subtitle,
+.hero-section.hero-entered .hero-ctas,
+.hero-section.hero-entered .hero-trust-bar {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   4. STABLE, ZERO-FLASH SCROLL REVEALS (Section 4, 5, 6)
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity var(--motion-slow) var(--ease-luxury),
+              transform var(--motion-slow) var(--ease-luxury);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Card Base Transitions (Compositor-friendly, includes opacity for smooth reveals) */
+.package-card,
+.destination-card,
+.service-card,
+.style-card,
+.editorial-review-card {
+  transition: opacity var(--motion-slow) var(--ease-luxury),
+              transform var(--motion-normal) var(--ease-luxury),
+              box-shadow var(--motion-normal) var(--ease-luxury),
+              border-color var(--motion-fast) ease;
+}
+
+/* Staggered Card Grid (Strict 70ms Interval per Section 8) */
+.stagger-grid > * {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: opacity var(--motion-slow) var(--ease-luxury),
+              transform var(--motion-slow) var(--ease-luxury),
+              box-shadow var(--motion-normal) var(--ease-luxury),
+              border-color var(--motion-fast) ease;
+}
+
+.stagger-grid.is-visible > *:nth-child(1) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 0ms; }
+.stagger-grid.is-visible > *:nth-child(2) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 70ms; }
+.stagger-grid.is-visible > *:nth-child(3) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 140ms; }
+.stagger-grid.is-visible > *:nth-child(4) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 210ms; }
+.stagger-grid.is-visible > *:nth-child(5) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 280ms; }
+.stagger-grid.is-visible > *:nth-child(6) { opacity: 1; transform: translate3d(0, 0, 0); transition-delay: 350ms; }
+
+/* ==========================================================================
+   5. NATURAL CARD HOVER & IMAGE ANIMATIONS (Section 13 & 14)
+   ========================================================================== */
+.package-thumb-wrap,
+.destination-image-box {
+  overflow: hidden;
+  position: relative;
+}
+
+.package-thumb-wrap img,
+.destination-image-box img {
+  transform: scale(1.02);
+  transition: transform 750ms var(--ease-luxury);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .package-card:hover,
+  .destination-card:hover {
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 16px 32px -6px rgba(10, 37, 64, 0.14);
+    border-color: #BAE6FD;
+  }
+
+  .service-card:hover {
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 14px 28px -4px rgba(10, 37, 64, 0.10);
+    border-color: #BAE6FD;
+  }
+
+  .package-card:hover .package-thumb-wrap img,
+  .destination-card:hover .destination-image-box img {
+    transform: scale(1.04);
+  }
+}
+
+/* ==========================================================================
+   6. RESPONSIVE BUTTON MICRO-INTERACTIONS (Section 21)
+   ========================================================================== */
+.btn {
+  transition: transform 220ms var(--ease-luxury),
+              background-color 220ms ease,
+              box-shadow 220ms ease !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  .btn:active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .btn span.arrow,
+  .btn .arrow-icon,
+  .mobile-nav-link span {
+    display: inline-block;
+    transition: transform 200ms var(--ease-luxury);
+  }
+
+  .btn:hover span.arrow,
+  .btn:hover .arrow-icon,
+  .mobile-nav-link:hover span {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  transition: transform var(--motion-normal) var(--ease-luxury),
+              box-shadow var(--motion-normal) var(--ease-luxury) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floating-whatsapp:hover {
+    transform: translate3d(0, -2px, 0) scale(1.03);
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.38);
+  }
+}
+
+/* ==========================================================================
+   7. NAVIGATION & STICKY HEADER (Section 15)
+   ========================================================================== */
+.site-header {
+  transition: background-color 300ms ease,
+              box-shadow 300ms ease,
+              backdrop-filter 300ms ease !important;
+}
+
+.site-header.scrolled {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Navigation Link Underline */
+.nav-link {
+  position: relative;
+  transition: color var(--motion-fast) ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary, #0EA5E9);
+  transition: width var(--motion-normal) var(--ease-luxury);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   8. MOBILE DRAWER STAGGER (Section 20)
+   ========================================================================== */
+.mobile-drawer-overlay {
+  transition: opacity 300ms var(--ease-luxury),
+              visibility 300ms var(--ease-luxury);
+}
+
+.mobile-drawer {
+  transition: transform 350ms var(--ease-luxury);
+}
+
+.mobile-drawer-overlay.active .mobile-nav-link {
+  opacity: 0;
+  transform: translate3d(0, 8px, 0);
+  animation: mobileLinkStagger 350ms var(--ease-luxury) forwards;
+}
+
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(1) { animation-delay: 50ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(2) { animation-delay: 100ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(3) { animation-delay: 150ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(4) { animation-delay: 200ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(5) { animation-delay: 250ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(6) { animation-delay: 300ms; }
+.mobile-drawer-overlay.active .mobile-nav-link:nth-child(7) { animation-delay: 350ms; }
+
+@keyframes mobileLinkStagger {
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* ==========================================================================
+   9. ITINERARY ACCORDION & TIMELINE
+   ========================================================================== */
+.timeline-item {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity var(--motion-slow) var(--ease-luxury),
+              transform var(--motion-slow) var(--ease-luxury);
+}
+
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.timeline-card {
+  transition: transform var(--motion-fast) var(--ease-luxury),
+              box-shadow var(--motion-fast) var(--ease-luxury);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .timeline-card:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 8px 18px -3px rgba(10, 37, 64, 0.08);
+  }
+}
+
+/* ==========================================================================
+   10. ACCESSIBILITY — REDUCED MOTION SAFE OVERRIDE
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .hero-bg-layer {
+    animation: none !important;
+  }
+  .luxury-loader {
+    display: none !important;
+  }
+}
